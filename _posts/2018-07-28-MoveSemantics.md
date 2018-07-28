@@ -2,7 +2,7 @@
 layout: post
 title: "[Programming] Move Semantics(이동 의미론)"
 date: 2018-07-28
-excerpt: "Move MoveSemantics(이동 의미론)에 관하"
+excerpt: "Move MoveSemantics(이동 의미론)에 관하]"
 tags: [C, C++]
 comments: false
 ---
