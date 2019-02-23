@@ -2,7 +2,7 @@
 layout: post
 title: "[Programming] Name Mangling"
 date: 2019-02-24
-excerpt: "객체지향의 5대 원칙에 관하여"
+excerpt: "Name Mangling에 관하여"
 tags: [C, C++]
 comments: false
 ---
@@ -23,13 +23,17 @@ comments: false
 각각 함수이름을 다르게해서 작성하면? 물론 된다. 하지만 가독성과 유지보수랑은 작별하자.
 그냥 Add라는 함수로 리턴값과 매계인자 타입만 바꿔주면 간단할거다.
 >float Add(float a, float) { return a + b; }
+>
 >float Add(int a, float b) { return a + b; }
+>
 >...
 
 일단 코드는 작성해서 프로그래머는 안다. 저것이 오버로딩이라는것을. 하지만 컴파일러는?
 이때 컴파일러는 컴파일시 Add함수를 서로 다른 이름으로 번역한다. 즉, Name Mangling을 해준다.
 >int Add(int a, int b) { return a + b; } => Addii
+>
 >float Add(float a, float) { return a + b; } => Addff
+>
 >float Add(int a, float b) { return a + b; } => Addif
 >...
 
