@@ -18,16 +18,18 @@ comments: false
 ---
 
  ### HTTP
- HyperText Transfer Protocol, 이하 http 는 www 상에서 주로 Html 문서를 주고받으며 TCP와 UDP를 사용하고 포트는 80번을 사용한다. 서버/클라이언트 모델을 따르는 프로토콜이며 클라이언트와 서버사이의 Request / Response 를 처리해준다. 예를들어 익스플로러나 크롬같은 웹브라우저가 서버에 웹페이지 접속을 요청(Request) 하면 서버는 웹페이지를 보여주기 위한 리소스등을 내려주어 응답(Response) 해준다.
+ HyperText Transfer Protocol, 이하 http 는 www 상에서 주로 Html 문서를 주고받으며 TCP와 UDP를 사용하고 포트는 80번을 사용한다. 또한 Application 계층에서 작동한다. 서버/클라이언트 모델을 따르는 프로토콜이며 클라이언트와 서버사이의 Request / Response 를 처리해준다. 예를들어 익스플로러나 크롬같은 웹브라우저가 서버에 웹페이지 접속을 요청(Request) 하면 서버는 웹페이지를 보여주기 위한 리소스등을 내려주어 응답(Response) 해준다.
 
  http는 한번의 요청과 그에 따른 응답이 끝나면 연결을 끊는 Connectless 방식으로 운용된다. 기본적으로 하나의 자원에 대해서 하나의 연결을 만든다고 보면 된다. 이러한 Connectless 방식은 불특정 다수의 사용자를 대상으로 하는 서비스에 적합하다. 연결을 계속 유지하게 되면, 수십만명이 이용하는 상황에서 처리할수 있는 요청이 적어지게 될테니 말이다. 하지만 연결을 끊기 때문에 클라이언트의 이전상태를 알수 없다.(Stateless)
 
  이때 이용되는 것이 쿠키(Cookie)이다. http는 쿠키를 이용하여 클라이언트와 서버의 상태정보를 저장해놓고 다음 연결에 상태를 다시 불러오는 식으로 Stateless 문제를 해결한다고 한다. 여담이지만, 상태를 저장하는 정보 조각이라고 해서 Cookie(조각) 라고 부른다고 한다.
 
+ 물론 HTTP 1.1 부터 지원되는 Keep-alive 기능을 통해서 지정된 시간동안 연결을 끊지않고 요청을 계속 보낼수 있다. 위 내용은 어디까지나 일반적인 경우다.
+ 
 ---
 
  ### HTTPS
- HyperText Transfer Protocol over Secure Socket Layer 이하 https 는 HTTP 에 보안(Security) 버전이라고 생각하면 되는 프로토콜이다. 보안적 측면이 강화된 만큼 인증통신과 전자상거래등에 자주 이용된다고 한다.
+ HyperText Transfer Protocol over Secure Socket Layer 이하 https 는 HTTP 에 보안(Security) 버전이라고 생각하면 되는 프로토콜이다. 보안적 측면이 강화된 만큼 인증통신과 전자상거래등에 자주 이용된다고 한다. HTTP와는 다르게 SSL/TSL 계층 위에서 작동한다.
 
  그러면 http에 비해 어떤식으로 보안이 강화된것일까? 사실 http는 보안이 없다고 봐도 무방하다. 아니 없다고 생각한다.
  http 프로토콜로 송수신되는 데이터는 텍스트이다. WWW 상에서 교환되는 Html 자체가 바이너리파일도 아닌 텍스트 파일임을 봐도, 알수 있고 HyperText Transfer 라는 명칭의 일부를 봐도 단순 텍스트 교환이란것을 알수 있다. 이말인즉, 문맹이 아니라면 전송되는 모든 정보를 읽을수 있다는 것이다. https 는 이러한 텍스트를 한번 암호화 하여 전송해주는 방식이다. 참고로 TCP/IP 의 기본 포트번호는 443이다.
