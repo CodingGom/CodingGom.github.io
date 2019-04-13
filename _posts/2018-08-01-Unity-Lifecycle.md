@@ -17,8 +17,8 @@ priority : 1.0
 순서를 생명주기(Lifecycle)이라고 한다.
 
 다음은 유니티 공식문서에 나와있는 이벤트함수 호출 플로우차트이다.
-![monobehaviour_flowchart](/assets/img/unitylifecycl/monobehaviour_flowchart.png)
 
+![monobehaviour_flowchart](/assets/img/unitylifecycle/monobehaviour_flowchart.png)
 [출처 : 유니티 공식문서_https://docs.unity3d.com/kr/530/Manual/ExecutionOrder.html]
 
 하나하나 살펴보자
