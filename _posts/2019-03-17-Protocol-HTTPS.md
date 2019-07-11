@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Network] Protocol - HTTPS"
+title: "[Network] 네트워크기초 - Protocol - HTTPS"
 date: 2019-03-17
 excerpt: "HTTPS 프로토콜의 보안에 관하여."
 tags: [Network]
