@@ -10,7 +10,7 @@ changefreq : daily
 priority : 1.0
 ---
 
-![warning](/assets/img/uiwebview/warning.png)
+![warning](/assets/img/uiwebview/warning.PNG)
 
 어느날 부턴가 iOS AppStore에 앱을 제출하면 위와같은 경고 메일이 오게되었다.
 요약하자면 "UIWebView 는 앞으로 사용되지 않으니 해당 이슈 처리를 미리 미리 해달라" 인데...
@@ -19,25 +19,25 @@ priority : 1.0
 ### 첫번째 해결책
 해당 앱을 만들때 사용한 Third party SDK나 패키지들을 살펴 보았다. 이부분에서는 쉽게 찾을 수 있었다. Firebase와 Unity Ads에서 UIWebView 를 사용중이었다. 다행이도 SDK와 패키지 버전을 업하여 쉽게 해결할수... 있을줄 알았다. 분명 버전업을 통해서 해당 모듈들에서는 UIWebView를 사용하지 않고 더이상 XCode와 Unity 에디터에서는 UIWebView의 흔적을 찾아 볼수 없었다.
 
-![firebase](/assets/img/uiwebview/firebase.png)
+![firebase](/assets/img/uiwebview/firebase.PNG)
 [출처 : Firebase release note]
 
-![unityads](/assets/img/uiwebview/unityads.png)
+![unityads](/assets/img/uiwebview/unityads.PNG)
 [출처 : Unity Ads release note]
 
 참고로 함께 일하는 개발자분의 말씀으로는 Google Admob, Vungle SDK 에서도 발견됬었다고 한다.
 
-![admobios](/assets/img/uiwebview/admobios.png)
+![admobios](/assets/img/uiwebview/admobios.PNG)
 [출처 : Google Admob release note]
 
 Admob의 경우 iOS SDK 7.55.0 버전에서 해결했다고 한다. 해당 버전 이상을 빌트인 하고 있는 Unity SDK를 사용하면 된다.
 
-![admob](/assets/img/uiwebview/admob.png)
+![admob](/assets/img/uiwebview/admob.PNG)
 [출처 : Google Admob release note]
 
 Vungle 또한 마찬가지이다. iOS SDK 6.4.3 에서 UIWebView 이슈를 해결했다고 하니, 해당 버전 이상이 빌트인된 플러그인을 사용하도록 하자. 현시점 기준으로 release된 Unity 플러그인은 6.4.3이상이 빌트인 되어 있다.
 
-![vungleios](/assets/img/uiwebview/vungleios.png)
+![vungleios](/assets/img/uiwebview/vungleios.PNG)
 [출처 : Vungle git release note]
 
 
