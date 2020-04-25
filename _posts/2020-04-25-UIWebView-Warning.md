@@ -2,7 +2,7 @@
 layout: post
 title: "[Unity] UIWebView Deprecated 이슈 해결법"
 date: 2020-04-25
-excerpt: "안드로이드의 4대 구성요소(컴포넌트)에 관하여."
+excerpt: "iOS 의 UIWebView Deprecated 이슈 해결"
 tags: [Unity]
 comments: false
 sitemap :
@@ -14,6 +14,7 @@ priority : 1.0
 
 어느날 부턴가 iOS AppStore에 앱을 제출하면 위와같은 경고 메일이 오게되었다.
 요약하자면 "UIWebView 는 앞으로 사용되지 않으니 해당 이슈 처리를 미리 미리 해달라" 인데...
+일반 네이티브 앱이라면 이미지의 설명처럼 "WKWebView"로 바꿔주면 되지만... 유니티로 뽑은 빌드는 그게 아니니까...
 사실 처음에는 원인 파악이 힘들었다. 일반적으로 Deprecate 되는 API나 라이브러리등을 제거하거나 마이그레이션 할때는 사용되는곳을 찾는게 우선이다.
 
 ### 첫번째 해결책
