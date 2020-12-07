@@ -51,8 +51,8 @@ iOS 개발을 하는 사람들, 조금이라도 iOS 개발에 관련되는 사�
 
 
 <p></p>
----
 
+<b>
 platform :ios, '10.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
@@ -60,8 +60,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Unity-iPhone' do
     pod 'CustomLib', '1.0.0'
 end
+</b>
 
----
 <p></p>
 
 
