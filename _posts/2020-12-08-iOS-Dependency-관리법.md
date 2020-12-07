@@ -49,8 +49,10 @@ iOS 개발을 하는 사람들, 조금이라도 iOS 개발에 관련되는 사�
 
 아래는 간단한 Podfile 예시 이다.
 
+
 <p></p>
 ---
+
 platform :ios, '10.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
@@ -58,6 +60,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Unity-iPhone' do
     pod 'CustomLib', '1.0.0'
 end
+
 ---
 <p></p>
 
