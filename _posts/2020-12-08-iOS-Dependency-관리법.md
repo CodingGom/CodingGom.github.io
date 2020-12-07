@@ -34,6 +34,7 @@ iOS 개발을 하는 사람들, 조금이라도 iOS 개발에 관련되는 사�
 
 <p><a href="https://codinggom.github.io/Dependency/">이전 포스팅 </a> 에서 의존성을 관리하긴 하는데, 프로젝트는 어떻게 알고 관리를 하는지 의문을 표한적이 있다. cocoapods 은 Podfile 이란 것을 이용한다. 구조는 간단하다.
 
+
 | 1) Podfile 은 최종 프로젝트를 생성해주는데 필요한 정보가 기재된 파일이다.
 
 | 2) Podfile 에는 라이브러리 이름, 버전, 소스, 종속시킬 타겟 등등... 의 정보가 기재되어 있다.
@@ -43,6 +44,7 @@ iOS 개발을 하는 사람들, 조금이라도 iOS 개발에 관련되는 사�
 | 4) 터미널 명령어 or 스크립트 등을 이용하여 해당 Podfile 기반의 Workspace (Xcode 프로젝트 형식)를 생성해준다.
 
 | 5) 생성된 Workspace 가 최종 프로젝트 파일이다. 이 파일로 앱을 빌드해 배포하면 된다.
+
 
 
 위 단계중, 개발자가 신경써야 할것은 Podfile 이다. Podfile 이외는 고정된 과정이며, Podfile 이 어떻게 구성되어 있는지에 따라 모든게 결정된다.
@@ -55,8 +57,8 @@ iOS 개발을 하는 사람들, 조금이라도 iOS 개발에 관련되는 사�
 
 아래는 간단한 Podfile 예시 이다.
 
-```
-platform :ios, '10.0'
+
+> platform :ios, '10.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -65,7 +67,7 @@ target 'Unity-iPhone' do
     pod ‘CustomLib’, '1.0.0'
 end
 
-```
+
 
 간단하게 해석을 해보면, 프로젝트 내에 'Unity-iPhone' 타겟에 'CustomLib' 의 '1.0.0' 버전을 의존성으로 걸어준다. 해당 라이브러리는 'https://github.com/CocoaPods/Specs.git' 에서 가져온다.
 
@@ -73,7 +75,6 @@ end
 
 
 ---
-
 
 ### 마무리
 
