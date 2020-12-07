@@ -50,19 +50,18 @@ iOS 개발을 하는 사람들, 조금이라도 iOS 개발에 관련되는 사�
 아래는 간단한 Podfile 예시 이다.
 
 <p></p>
-~~~
+---
 platform :ios, '10.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-
 target 'Unity-iPhone' do
-    pod ‘CustomLib’, '1.0.0'
+    pod 'CustomLib', '1.0.0'
 end
-~~~
-
+---
 <p></p>
-```
+
+
 간단하게 해석을 해보면, 프로젝트 내에 'Unity-iPhone' 타겟에 'CustomLib' 의 '1.0.0' 버전을 의존성으로 걸어준다. 해당 라이브러리는 'https://github.com/CocoaPods/Specs.git' 에서 가져온다.
 이처럼 프로젝트에 사용할 구성을 Podfile 로 만들어주는 과정을 해주면 된다.
 
